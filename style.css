@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    border: 3px solid #F0BCD4;
+    background-image: url(imgback2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+}
+.head-pannel{
+    font-size: 1.5rem;
+    height: 10vh;
+    color: #1F0322;
+    padding: 0vh 0vw 11vh 3vw;
+    visibility: hidden;
+    
+}
+header h1{
+    text-shadow:  -3px -1px 3px #F0BCD4, 0px 6px 4.7px #8A1C7C, 4px 1px 4px #F0BCD4;
+    font-family: Brush Script MT;
+}
+.object{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.pics{
+    width: 60vw;
+    height: 100%;
+    background-color: aliceblue;
+    border: 10px solid #1F0322;
+    box-shadow:  -6px 2px 18px 1px #F0BCD4, -5px 5px 11px 7px #8A1C7C, 3px -2px 4px 2px #F0BCD4;
+    background-image: url(jp1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    image-orientation: from-image;
+    animation: picslide 25s linear(0 0%, 0 0.59%)  infinite;
+    z-index: 3;
+}
+ span{
+    background-color: white;
+    border-radius: 50%;
+    background: transparent;
+    pointer-events: none;
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.5);
+    position:fixed;
+    bottom: -50px;
+    z-index: 2;
+    animation: animate 4s  infinite;
+
+}
+@keyframes animate{
+    0%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-2000%);
+        opacity: 1;
+    }
+}
+@keyframes picslide{
+    0%{
+        background-image: url(jp1.jpg);
+        -o-transition-duration: 0ms;
+    }
+    25%{
+        background-image: url(j2.jpg);
+        -o-transition-duration: 0ms;
+    }
+    50%{
+        background-image: url(j3.jpg);
+        -o-transition-duration: 0ms;
+    }
+    75%{
+        background-image: url(j4.jpg);
+        -o-transition-duration: 0ms;
+    }
+    100%{
+        background-image: url(j5.jpg);
+        -o-transition-duration: 0ms;
+    }
+}
+#audio{
+    height: 0vh;
+}
+header button{
+    font-size: 10vw;
+    height: 20vw;
+    width: 60vw;
+    background-color: transparent;
+    color: #1F0322;
+    text-shadow:  -3px -1px 3px #F0BCD4, 0px 6px 4.7px #8A1C7C, 4px 1px 4px #F0BCD4;
+    font-family: Brush Script MT;
+}
